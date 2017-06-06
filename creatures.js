@@ -1,4 +1,20 @@
 var creatures = {
+    "Dwarf Professions": [
+        ["&#x00a9;", "Metalsmiths", "DGRAY"],
+        ["&#x00a9;", "Fishery Worker", "BLUE"],
+        ["&#x00a9;", "Craftsdwarfs", "LBLUE"],
+        ["&#x00a9;", "Rangers", "GREEN"],
+        ["&#x00a9;", "Jewelers", "LGREEN"],
+        ["&#x00a9;", "Peasants", "CYAN"],
+        ["&#x00a9;", "<i>On Break</i>", "LCYAN"],
+        ["&#x00a9;", "Children", "RED"],
+        ["&#x00a9;", "Engineers", "LRED"],
+        ["&#x00a9;", "Administrators", "MAGENTA"],
+        ["&#x00a9;", "Farmers", "BROWN"],
+        ["&#x00a9;", "Woodworkers", "YELLOW"],
+        ["&#x00a9;", "Miners", "LGRAY"],
+        ["&#x00a9;", "Stoneworkers", "WHITE"]
+    ],
     "Main Races": [
         ["&#x263a;", "Dwarf", "CYAN"],
         ["e", "Elf", "CYAN"],

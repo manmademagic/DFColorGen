@@ -7,9 +7,12 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="./map.js"></script>
+    <!-- script type="text/javascript" src="./map2.js"></script -->
     <script type="text/javascript" src="./creatures.js"></script>
     <script type="text/javascript" src="./df.js"></script>
+    <script type="text/javascript" src="./colorschemes.js"></script>
 
+    <link rel="stylesheet" href="./style.css">
     <meta property="og:title" content="Dwarf Fortress Color Generator">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://manmademagic.com/dfcolorgen/" />
@@ -17,241 +20,6 @@
     <meta property="og:image:width" content="330">
     <meta property="og:image:height" content="400">
     <meta property="og:description" content="A colorscheme generator for Dwarf Fortress">
-
-    <style>
-        @font-face {
-            font-family: "Dwarven";
-            src: url("DwarfFortressVan.ttf")
-        }
-
-        body {
-            background-color: black;
-            color: white;
-            margin: 0;
-            font-family: "Dwarven", "Courier New";
-        }
-
-        input.jscolor {
-            display: block;
-            margin: 0 auto;
-            text-align: center;
-            width: 100%;
-            height: 100%;
-            border: 0;
-            outline: none;
-            cursor: pointer;
-            opacity: 1;
-            background-color: rgba(255, 255, 255, 0.0);
-            font-family: "Dwarven";
-            font-size: 18px;
-        }
-
-        div.wrapper {
-            margin: auto;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        table {
-            border-spacing: 0;
-        }
-
-        div.example {
-            background-color: black;
-            width: 200px;
-            color: black;
-            font-weight: 400;
-            font-size: 16px;
-            font-kerning: 0;
-            letter-spacing: 0px;
-        }
-
-        div.output {
-            margin: 5px;
-            display: inline-block;
-            width: 150px;
-            padding-left: 5px;
-        }
-
-        [name="RGB_BLACK"] {
-            background-color: rgb(0, 0, 0)
-        }
-
-        [name="RGB_BLUE"] {
-            color: rgb(0, 0, 128)
-        }
-
-        [name="RGB_GREEN"] {
-            color: rgb(0, 128, 0)
-        }
-
-        [name="RGB_CYAN"] {
-            color: rgb(0, 128, 128)
-        }
-
-        [name="RGB_RED"] {
-            color: rgb(128, 0, 0)
-        }
-
-        [name="RGB_MAGENTA"] {
-            color: rgb(128, 0, 128)
-        }
-
-        [name="RGB_BROWN"] {
-            color: rgb(128, 128, 0)
-        }
-
-        [name="RGB_LGRAY"] {
-            color: rgb(192, 192, 192)
-        }
-
-        [name="RGB_DGRAY"] {
-            color: rgb(128, 128, 128)
-        }
-
-        [name="RGB_LBLUE"] {
-            color: rgb(0, 0, 255)
-        }
-
-        [name="RGB_LGREEN"] {
-            color: rgb(0, 255, 0)
-        }
-
-        [name="RGB_LCYAN"] {
-            color: rgb(0, 255, 255)
-        }
-
-        [name="RGB_LRED"] {
-            color: rgb(255, 0, 0)
-        }
-
-        [name="RGB_LMAGENTA"] {
-            color: rgb(255, 0, 255)
-        }
-
-        [name="RGB_YELLOW"] {
-            color: rgb(255, 255, 0)
-        }
-
-        [name="RGB_WHITE"] {
-            color: rgb(255, 255, 255)
-        }
-
-        .map {
-            float: right;
-        }
-
-        .map>table {
-            table-layout: fixed;
-        }
-
-        .map>table>tbody>tr>td {
-            margin: 0;
-            border: 0;
-            padding: 0;
-            height: 5px;
-            word-wrap: break-word;
-        }
-
-        .map>table>tbody>tr>td>div {
-            margin: 0;
-            border: 0;
-            padding: 0;
-            height: 12px;
-            word-wrap: break-word;
-            font-size: 16px;
-        }
-
-        .creatures {
-            display: inline-block;
-            padding-left: 10px;
-        }
-
-        .category {
-            font-size: 20px;
-            font-weight: lighter;
-            padding-top: 10px;
-        }
-
-        table.colors>tbody>tr>td {
-            padding: 0;
-            height: 140px;
-        }
-
-        .colors {
-            width: 100%
-        }
-
-        .fileUpload {
-            position: relative;
-            overflow: hidden;
-            margin: 10px;
-        }
-
-        .fileName {
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-            margin: 10px 0;
-            padding-top: 5px;
-            font-family: "Dwarven";
-            padding: 0px 12px;
-        }
-
-        .fileName>input {
-            border: 1px solid #cccccc;
-            border-bottom-color: #b3b3b3;
-            color: white;
-            background-color: black;
-            font-family: "Dwarven";
-            font-size: 16px;
-            padding: 4px 12px;
-            width: 250px;
-        }
-
-        .buttonWrapper {
-            position: relative;
-            overflow: hidden;
-            margin: 10px;
-            display: inline-block;
-            padding: 4px 12px;
-            border: 1px solid #cccccc;
-            border-bottom-color: #b3b3b3;
-            background-color: black;
-        }
-
-        .buttonWrapper:hover {
-            background-color: gray;
-        }
-
-        input.button {
-            position: absolute;
-            top: 0;
-            right: 0;
-            margin: 0;
-            padding: 0;
-            font-size: 20px;
-            cursor: pointer;
-            opacity: 0;
-            filter: alpha(opacity=0);
-        }
-
-        .presetSelector {
-            display: inline-block;
-            margin: 10px;
-        }
-
-        .presetSelector select {
-            height: 27px;
-            background-color: black;
-            color: white;
-            font-family: "Dwarven";
-            font-size: 16px;
-            top: -19px;
-            position: relative;
-        }
-    </style>
 </head>
 
 <body name="RGB_BLACK">
@@ -331,50 +99,6 @@
     <div class="presetSelector selectWrapper" onchange="presetSelect()" style="display:inline-block">
         <select name="presetSelector" id="presetSelector">
             <option value="">Select Preset...</option>
-            <option value="ASCII_Default.txt">ASCII Default</option>
-            <option value="AngleWyrms_Colorset.txt">AngleWyrm's Colorset</option>
-            <option value="Another_Natural_Scheme.txt">Another Natural Scheme</option>
-            <option value="Colorblind.txt">Colorblind</option>
-            <option value="Colorblind_Red-Green.txt">Colorblind-Red-Green</option>
-            <option value="Dawnbringer.txt">Dawnbringer</option>
-            <option value="Higher-Visibility.txt">Higher-Visibility</option>
-            <option value="Lees_Colour_Scheme.txt">Lee's Colour Scheme</option>
-            <option value="Lees_Colour_Scheme-V2.txt">Lee's Colour Scheme V2</option>
-            <option value="Nagidal.txt">Nagidal</option>
-            <option value="Natural.txt">Natural</option>
-            <option value="Pastel_Bleach.txt">Pastel Bleach</option>
-            <option value="Putnams_Fortbent_Color_Scheme.txt">Putnam's Fortbent Color Scheme</option>
-            <option value="Rave_Fungus.txt">Rave Fungus</option>
-            <option value="Red-Green Colorblindness.txt">Red-Green Colorblindness</option>
-            <option value="Shady_Paint.txt">Shady Paint</option>
-            <option value="Taffer_Pastel.txt">Taffer Pastel</option>
-            <option value="Tango_Scheme.txt">Tango Scheme</option>
-            <option value="True_Brown.txt">True Brown</option>
-            <option value="True_CGA_Scheme.txt">True CGA Scheme</option>
-            <option value="Vherid_Ash.txt">Vherid: Ash</option>
-            <option value="Vherid_Bone.txt">Vherid: Bone</option>
-            <option value="Vherid_Dark Sand.txt">Vherid: Dark Sand</option>
-            <option value="Vherid_Default_Plus.txt">Vherid: Default+</option>
-            <option value="Vherid_Dusk.txt">Vherid: Dusk</option>
-            <option value="Vherid_Fields.txt">Vherid: Fields</option>
-            <option value="Vherid_Jade.txt">Vherid: Jade</option>
-            <option value="Vherid_Matrix.txt">Vherid: Matrix</option>
-            <option value="Vherid_Mishka.txt">Vherid: Mishka</option>
-            <option value="Vherid_Natural.txt">Vherid: Natural</option>
-            <option value="Vherid_NES.txt">Vherid: NES</option>
-            <option value="Vherid_Pastel.txt">Vherid: Pastel</option>
-            <option value="Vherid_Sorrow.txt">Vherid: Sorrow</option>
-            <option value="Vherid_Summer.txt">Vherid: Summer</option>
-            <option value="Vherid_Vintage.txt">Vherid: Vintage</option>
-            <option value="Vherid_Warm.txt">Vherid: Warm</option>
-            <option value="(Yet)_Another_scheme.txt">(Yet) Another scheme</option>
-            <option value="Phoebus.txt">Phoebus</option>
-            <option value="Mayday.txt">Mayday</option>
-            <option value="Ironhand.txt">Ironhand</option>
-            <option value="Spacefox.txt">Spacefox</option>
-            <option value="GemSet.txt">Gemset</option>
-            <option value="CLA.txt">CLA</option>
-            <option value="Obsidian.txt">Obsidian</option>
         </select>
     </div>
     <div class="fileName">
@@ -433,7 +157,7 @@
         <br /> </div>
 
 
-    <div class="map" name="RGB_BLACK" id="worldMap">
+    <div class="map" name="RGB_BLACK" id="preview">
         <table name="RGB_BLACK" id="map">
             <tbody></tbody>
         </table>

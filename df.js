@@ -1,19 +1,19 @@
-/*var map = [
-    [
-        ["ă", "LCYAN"],
-        ["Ă", "LCYAN"]
-    ],
-    [
-        ["ă", "LCYAN"],
-        ["Ă", "LCYAN"]
-    ]
-]*/
-
 $(document).ready(function() {
     generateMap("map")
     generateCreatures("creatures")
+    getColorSchemes(colorschemes)
     fileUpload()
 })
+
+function getColorSchemes(colorSchemes) {
+    colorSchemes.sort()
+    colorSchemes.forEach(function(colorScheme) {
+        $(document.createElement("option"))
+            .attr("value", colorScheme[0])
+            .append(colorScheme[1])
+            .appendTo("#presetSelector")
+    })
+}
 
 function fileUpload() {
     var fileInput = document.getElementById("fileUpload")

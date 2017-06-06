@@ -1,0 +1,234 @@
+@font-face {
+    font-family: "Dwarven";
+    src: url("DwarfFortressVan.ttf");
+}
+
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: "Dwarven", "Courier New";
+}
+
+input.jscolor {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.0);
+    font-family: "Dwarven";
+    font-size: 18px;
+}
+
+div.wrapper {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+table {
+    border-spacing: 0;
+}
+
+div.example {
+    background-color: black;
+    width: 200px;
+    color: black;
+    font-weight: 400;
+    font-size: 16px;
+    font-kerning: 0;
+    letter-spacing: 0px;
+}
+
+div.output {
+    margin: 5px;
+    display: inline-block;
+    width: 150px;
+    padding-left: 5px;
+}
+
+[name="RGB_BLACK"] {
+    background-color: rgb(0, 0, 0);
+}
+
+[name="RGB_BLUE"] {
+    color: rgb(0, 0, 128);
+}
+
+[name="RGB_GREEN"] {
+    color: rgb(0, 128, 0);
+}
+
+[name="RGB_CYAN"] {
+    color: rgb(0, 128, 128);
+}
+
+[name="RGB_RED"] {
+    color: rgb(128, 0, 0);
+}
+
+[name="RGB_MAGENTA"] {
+    color: rgb(128, 0, 128);
+}
+
+[name="RGB_BROWN"] {
+    color: rgb(128, 128, 0);
+}
+
+[name="RGB_LGRAY"] {
+    color: rgb(192, 192, 192);
+}
+
+[name="RGB_DGRAY"] {
+    color: rgb(128, 128, 128);
+}
+
+[name="RGB_LBLUE"] {
+    color: rgb(0, 0, 255);
+}
+
+[name="RGB_LGREEN"] {
+    color: rgb(0, 255, 0);
+}
+
+[name="RGB_LCYAN"] {
+    color: rgb(0, 255, 255);
+}
+
+[name="RGB_LRED"] {
+    color: rgb(255, 0, 0);
+}
+
+[name="RGB_LMAGENTA"] {
+    color: rgb(255, 0, 255);
+}
+
+[name="RGB_YELLOW"] {
+    color: rgb(255, 255, 0);
+}
+
+[name="RGB_WHITE"] {
+    color: rgb(255, 255, 255);
+}
+
+#preview {
+    float: right;
+    display: flex;
+}
+
+#map {
+    table-layout: fixed;
+}
+
+#map > tbody > tr > td {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    height: 5px;
+    word-wrap: break-word;
+}
+
+#map > tbody > tr > td > div {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    height: 12px;
+    word-wrap: break-word;
+    font-size: 16px;
+    text-align: center;
+}
+
+.creatures {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.category {
+    font-size: 20px;
+    font-weight: lighter;
+    padding-top: 10px;
+}
+
+table.colors > tbody > tr > td {
+    padding: 0;
+    height: 140px;
+}
+
+.colors {
+    width: 100%;
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.fileName {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0;
+    padding-top: 5px;
+    font-family: "Dwarven";
+    padding: 0px 12px;
+}
+
+.fileName > input {
+    border: 1px solid #cccccc;
+    border-bottom-color: #b3b3b3;
+    color: white;
+    background-color: black;
+    font-family: "Dwarven";
+    font-size: 16px;
+    padding: 4px 12px;
+    width: 250px;
+}
+
+.buttonWrapper {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    display: inline-block;
+    padding: 4px 12px;
+    border: 1px solid #cccccc;
+    border-bottom-color: #b3b3b3;
+    background-color: black;
+}
+
+.buttonWrapper:hover {
+    background-color: gray;
+}
+
+input.button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.presetSelector {
+    display: inline-block;
+    margin: 10px;
+}
+
+.presetSelector select {
+    height: 27px;
+    background-color: black;
+    color: white;
+    font-family: "Dwarven";
+    font-size: 16px;
+    top: -19px;
+    position: relative;
+}
