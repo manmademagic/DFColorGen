@@ -55,5 +55,6 @@ var colorschemes = [
     [["Spacefox.txt"], ["Spacefox"]],
     [["GemSet.txt"], ["Gemset"]],
     [["CLA.txt"], ["CLA"]],
-    [["Obsidian.txt"], ["Obsidian"]]
+    [["Obsidian.txt"], ["Obsidian"]],
+    [["Windows_10.txt"], ["Windows 10"]]
 ]
