@@ -145,14 +145,28 @@ div.output {
 }
 
 .creatures {
-    display: inline-block;
     padding-left: 10px;
+    padding-top: 10px;
 }
 
 .category {
     font-size: 20px;
     font-weight: lighter;
-    padding-top: 10px;
+}
+
+.category-items {
+    border-top: 1px solid white;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.category-items > div {
+    display: inline-block;
+    width: 280px;
+}
+
+.creature-icon {
+    padding-right: 10px;
 }
 
 table.colors > tbody > tr > td {
