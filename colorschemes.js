@@ -56,5 +56,6 @@ var colorschemes = [
     [["GemSet.txt"], ["Gemset"]],
     [["CLA.txt"], ["CLA"]],
     [["Obsidian.txt"], ["Obsidian"]],
-    [["Windows_10.txt"], ["Windows 10"]]
+    [["Windows_10.txt"], ["Windows 10"]],
+    [["Cartography.txt"], ["Cartography"]]
 ]
