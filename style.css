@@ -117,16 +117,82 @@ div.output {
     color: rgb(255, 255, 255);
 }
 
+.BGC_BLACK {
+    background-color: rgb(0, 0, 0);
+}
+
+.BGC_BLUE {
+    background-color: rgb(0, 0, 128);
+}
+
+.BGC_GREEN {
+    background-color: rgb(0, 128, 0);
+}
+
+.BGC_CYAN {
+    background-color: rgb(0, 128, 128);
+}
+
+.BGC_RED {
+    background-color: rgb(128, 0, 0);
+}
+
+.BGC_MAGENTA {
+    background-color: rgb(128, 0, 128);
+}
+
+.BGC_BROWN {
+    background-color: rgb(128, 128, 0);
+}
+
+.BGC_LGRAY {
+    background-color: rgb(192, 192, 192);
+}
+
+.BGC_DGRAY {
+    background-color: rgb(128, 128, 128);
+}
+
+.BGC_LBLUE {
+    background-color: rgb(0, 0, 255);
+}
+
+.BGC_LGREEN {
+    background-color: rgb(0, 255, 0);
+}
+
+.BGC_LCYAN {
+    background-color: rgb(0, 255, 255);
+}
+
+.BGC_LRED {
+    background-color: rgb(255, 0, 0);
+}
+
+.BGC_LMAGENTA {
+    background-color: rgb(255, 0, 255);
+}
+
+.BGC_YELLOW {
+    background-color: rgb(255, 255, 0);
+}
+
+.BGC_WHITE {
+    background-color: rgb(255, 255, 255);
+}
+
 #preview {
     float: right;
     display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
 }
 
-#map {
+#map, .map > table {
     table-layout: fixed;
 }
 
-#map > tbody > tr > td {
+#map > tbody > tr > td, .map > table > tbody > tr > td {
     margin: 0;
     border: 0;
     padding: 0;
@@ -134,7 +200,7 @@ div.output {
     word-wrap: break-word;
 }
 
-#map > tbody > tr > td > div {
+#map > tbody > tr > td > div, .map > table > tbody > tr > td > div {
     margin: 0;
     border: 0;
     padding: 0;
@@ -143,6 +209,12 @@ div.output {
     font-size: 16px;
     text-align: center;
 }
+
+#stones > tbody > tr > td {
+    height: 13px;
+    line-height: 16px;
+}
+
 
 .creatures {
     display: inline-block;

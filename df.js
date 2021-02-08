@@ -1,5 +1,6 @@
 $(document).ready(function() {
     generateMap("map")
+    generateStones("stones")
     generateCreatures("creatures")
     getColorSchemes(colorschemes)
     fileUpload()
@@ -94,6 +95,28 @@ function generateMap(mapTableID) {
     }
 }
 
+function generateStones(stoneTableID) {
+    var tbody = $("#" + stoneTableID + ">tbody")
+
+    for (var row = 0; row < stones.length; row++) {
+        $(document.createElement("tr")).appendTo(tbody)
+        for (var column = 0; column < stones[row].length; column++) {
+            $(document.createElement("td")).appendTo(tbody.children()[row])
+            $(tbody.children()[row].children[column]).append(
+                '<div name="RGB_' +
+                    stones[row][column][2] + 
+                    '" class="BGC_' +
+                    stones[row][column][3] +
+                    '" title="' +
+                    stones[row][column][1] +
+                    '">' +
+                    stones[row][column][0] +
+                    '</div>'
+            )
+        }
+    }
+}
+
 function colorChange(colorName) {
     var RGB_COLOR = document.getElementsByName("RGB_" + colorName)
     for (var i = 0, max = RGB_COLOR.length; i < max; i++) {
@@ -104,6 +127,11 @@ function colorChange(colorName) {
             RGB_COLOR[i].style.color =
                 "#" + document.getElementById(colorName + "_PICKER").value
         }
+    }
+    var BG_COLOR = document.getElementsByClassName("BGC_" + colorName)
+    for (var i = 0, max = BG_COLOR.length; i < max; i++) {
+        BG_COLOR[i].style.backgroundColor =
+            "#" + document.getElementById(colorName + "_PICKER").value
     }
 }
 

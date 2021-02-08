@@ -8,6 +8,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="./map.js"></script>
+    <script type="text/javascript" src="./stones.js"></script>
     <!-- script type="text/javascript" src="./map2.js"></script -->
     <script type="text/javascript" src="./creatures.js"></script>
     <script type="text/javascript" src="./df.js"></script>
@@ -158,11 +159,21 @@
         <br /> </div>
 
 
-    <div class="map" name="RGB_BLACK" id="preview">
-        <table name="RGB_BLACK" id="map">
-            <tbody></tbody>
-        </table>
+    <div id="preview">
+        <div class="map" name="RGB_BLACK">
+            <table name="RGB_BLACK" id="map">
+                <tbody></tbody>
+            </table>
+        </div>
+    
+        <div class="BGC_LGRAY map">
+            <table class="BGC_LGRAY" id="stones">
+                <tbody></tbody>
+            </table>
+        </div>
     </div>
+    
+
     <hr />
 
     <table id="creatures" class="creatures">
