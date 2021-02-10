@@ -1,13 +1,27 @@
 @font-face {
-    font-family: "Dwarven";
-    src: url("DwarfFortressVan.ttf");
+    font-family: "curses8x12";
+    src: url("fonts/curses8x12.woff2") format("woff2"),
+        url("fonts/curses8x12.woff") format("woff"),
+        url("fonts/curses8x12.ttf") format("ttf"),
+        url("fonts/curses8x12.otf") format("otf");
+}
+
+@font-face {
+    font-family: "curses10x12";
+    src: url("fonts/curses10x12.woff2") format("woff2"),
+        url("fonts/curses10x12.woff") format("woff"),
+        url("fonts/curses10x12.ttf") format("ttf"),
+        url("fonts/curses10x12.otf") format("otf");
 }
 
 body {
     background-color: black;
     color: white;
     margin: 0;
-    font-family: "Dwarven", "Courier New";
+    font-size: 12px;
+    line-height: 1em;
+    font-kerning: 0;
+    font-family: "curses8x12", "Courier New";
 }
 
 input.jscolor {
@@ -21,8 +35,8 @@ input.jscolor {
     cursor: pointer;
     opacity: 1;
     background-color: rgba(255, 255, 255, 0.0);
-    font-family: "Dwarven";
-    font-size: 18px;
+    font-family: "curses10x12";
+    font-size: 12px;
 }
 
 div.wrapper {
@@ -40,9 +54,7 @@ div.example {
     background-color: black;
     width: 200px;
     color: black;
-    font-weight: 400;
-    font-size: 16px;
-    font-kerning: 0;
+    font-weight: 500;
     letter-spacing: 0px;
 }
 
@@ -186,6 +198,7 @@ div.output {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-end;
+    font-family: "curses10x12";
 }
 
 #map, .map > table {
@@ -196,7 +209,7 @@ div.output {
     margin: 0;
     border: 0;
     padding: 0;
-    height: 5px;
+    height: 12px;
     word-wrap: break-word;
 }
 
@@ -206,25 +219,23 @@ div.output {
     padding: 0;
     height: 12px;
     word-wrap: break-word;
-    font-size: 16px;
     text-align: center;
 }
 
 #stones > tbody > tr > td {
-    height: 13px;
-    line-height: 16px;
+    height: 12px;
 }
 
 
 .creatures {
     display: inline-block;
-    padding-left: 10px;
+    padding-left: 8px;
 }
 
 .category {
-    font-size: 20px;
-    font-weight: lighter;
-    padding-top: 10px;
+    font-size: 24px;
+    line-height: 1em;
+    padding-top: 12px;
 }
 
 table.colors > tbody > tr > td {
@@ -248,7 +259,6 @@ table.colors > tbody > tr > td {
     overflow: hidden;
     margin: 10px 0;
     padding-top: 5px;
-    font-family: "Dwarven";
     padding: 0px 12px;
 }
 
@@ -257,8 +267,8 @@ table.colors > tbody > tr > td {
     border-bottom-color: #b3b3b3;
     color: white;
     background-color: black;
-    font-family: "Dwarven";
-    font-size: 16px;
+    font-family: inherit;
+    font-size: 12px;
     padding: 4px 12px;
     width: 250px;
 }
@@ -284,7 +294,7 @@ input.button {
     right: 0;
     margin: 0;
     padding: 0;
-    font-size: 20px;
+    font-size: 24px;
     cursor: pointer;
     opacity: 0;
     filter: alpha(opacity=0);
@@ -299,8 +309,8 @@ input.button {
     height: 27px;
     background-color: black;
     color: white;
-    font-family: "Dwarven";
-    font-size: 16px;
+    font-family: inherit;
+    font-size: 12px;
     top: -19px;
     position: relative;
 }
