@@ -57,5 +57,10 @@ var colorschemes = [
     [["CLA.txt"], ["CLA"]],
     [["Obsidian.txt"], ["Obsidian"]],
     [["Windows_10.txt"], ["Windows 10"]],
-    [["Cartography.txt"], ["Cartography"]]
+    [["Cartography.txt"], ["Cartography"]],
+    [["Gruvbox.txt"], ["Gruvbox"]],
+    [["Gleaming_Emeralds.txt"], ["Gleaming Emeralds"]],
+    [["Rose_Pine.txt"], ["Rose Pine"]],
+    [["Forgotten_Beats.txt"], ["Forgotten Beats"]],
+    [["Gloom.txt"], ["Gloom"]]
 ]
