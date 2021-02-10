@@ -1,6 +1,6 @@
 A simple colorscheme generator for Dwarf Fortress
 
-Available to play with at https://manmademagic.github.io/DFColorGen
+Available to play with at https://alfalfascout.github.io/DFColorGen
 
 # DFColorGen
 Features:
