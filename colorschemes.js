@@ -62,5 +62,6 @@ var colorschemes = [
     [["Gleaming_Emeralds.txt"], ["Gleaming Emeralds"]],
     [["Rose_Pine.txt"], ["Rose Pine"]],
     [["Forgotten_Beats.txt"], ["Forgotten Beats"]],
-    [["Gloom.txt"], ["Gloom"]]
+    [["Gloom.txt"], ["Gloom"]],
+    [["One_Dark.txt"], ["One Dark"]]
 ]
