@@ -49,30 +49,41 @@ function fileUpload() {
 }
 
 function generateCreatures(creatureTableID) {
-    var tbody = $("#" + creatureTableID + ">tbody")
+    var creatureSection = $("#" + creatureTableID)
     var categories = Object.keys(creatures)
-    var rowCount = 0
-    var td = $(document.createElement("td"))
-    categories.forEach(function(category) {
-        $(document.createElement("tr")).appendTo(tbody)
-        $(document.createElement("td"))
+
+    categories.forEach(function(category, categoryIndex) {
+        var categoryId = "category-" + categoryIndex
+
+        $(document.createElement("div"))
             .attr("name", "RGB_WHITE")
-            .attr("colspan", 2)
             .attr("class", "category")
+            .attr("id", categoryId)
             .text(category)
-            .appendTo(tbody.children()[rowCount])
-        rowCount++
-        creatures[category].forEach(function(creature) {
-            $(document.createElement("tr")).appendTo(tbody)
-            $(document.createElement("td"))
+            .appendTo(creatureSection)
+
+        $(document.createElement("div"))
+            .attr("name", "RGB_WHITE")
+            .attr("class", "category-items")
+            .appendTo($("#" + categoryId))
+
+        creatures[category].forEach(function(creature, creatureIndex) {
+            var creatureId = categoryId + "-" + creatureIndex
+
+            $(document.createElement("div"))
+                .attr("id", creatureId)
+                .appendTo($("#" + categoryId + ">.category-items"))
+
+            $(document.createElement("span"))
                 .attr("name", "RGB_" + creature[2])
+                .attr("class", "creature-icon")
                 .append(creature[0])
-                .appendTo(tbody.children()[rowCount])
-            $(document.createElement("td"))
+                .appendTo($("#" + creatureId))
+
+            $(document.createElement("span"))
                 .attr("name", "RGB_" + creature[2])
                 .append(creature[1])
-                .appendTo(tbody.children()[rowCount])
-            rowCount++
+                .appendTo($("#" + creatureId))
         })
     })
 }
