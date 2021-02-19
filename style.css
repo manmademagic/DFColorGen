@@ -14,13 +14,32 @@
         url("fonts/curses10x12.otf") format("otf");
 }
 
+:root {
+    --BLACK: rgb(0,0,0);
+	--BLUE: rgb(0,0,128);
+	--GREEN: rgb(0,128,0);
+	--CYAN: rgb(0,128,128);
+	--RED: rgb(128,0,0);
+	--MAGENTA: rgb(128,0,128);
+	--BROWN: rgb(128,128,0);
+	--LGRAY: rgb(192,192,192);
+	--DGRAY: rgb(128,128,128);
+	--LBLUE: rgb(0,0,255);
+	--LGREEN: rgb(0,255,0);
+	--LCYAN: rgb(0,255,255);
+	--LRED: rgb(255,0,0);
+	--LMAGENTA: rgb(255,0,255);
+	--YELLOW: rgb(255,255,0);
+	--WHITE: rgb(255,255,255);
+}
+
 body {
-    background-color: black;
-    color: white;
+    background-color: var(--BLACK);
+    color: var(--WHITE);
     margin: 0;
     font-size: 12px;
     line-height: 1em;
-    font-kerning: 0;
+    font-kerning: none;
     font-family: "curses8x12", "Courier New";
 }
 
@@ -51,9 +70,9 @@ table {
 }
 
 div.example {
-    background-color: black;
+    background-color: var(--BLACK);
     width: 200px;
-    color: black;
+    color: var(--BLACK);
     font-weight: 500;
     letter-spacing: 0;
 }
@@ -65,133 +84,39 @@ div.output {
     padding-left: 5px;
 }
 
-[name="RGB_BLACK"] {
-    background-color: rgb(0, 0, 0);
-}
+.B-BLACK { background-color: var(--BLACK); }
+.B-BLUE { background-color: var(--BLUE); }
+.B-GREEN { background-color: var(--GREEN); }
+.B-CYAN { background-color: var(--CYAN); }
+.B-RED { background-color: var(--RED); }
+.B-MAGENTA { background-color: var(--MAGENTA); }
+.B-BROWN { background-color: var(--BROWN); }
+.B-LGRAY { background-color: var(--LGRAY); }
+.B-DGRAY { background-color: var(--DGRAY); }
+.B-LBLUE { background-color: var(--LBLUE); }
+.B-LGREEN { background-color: var(--LGREEN); }
+.B-LCYAN { background-color: var(--LCYAN); }
+.B-LRED { background-color: var(--LRED); }
+.B-LMAGENTA { background-color: var(--LMAGENTA); }
+.B-YELLOW { background-color: var(--YELLOW); }
+.B-WHITE { background-color: var(--WHITE); }
 
-[name="RGB_BLUE"] {
-    color: rgb(0, 0, 128);
-}
-
-[name="RGB_GREEN"] {
-    color: rgb(0, 128, 0);
-}
-
-[name="RGB_CYAN"] {
-    color: rgb(0, 128, 128);
-}
-
-[name="RGB_RED"] {
-    color: rgb(128, 0, 0);
-}
-
-[name="RGB_MAGENTA"] {
-    color: rgb(128, 0, 128);
-}
-
-[name="RGB_BROWN"] {
-    color: rgb(128, 128, 0);
-}
-
-[name="RGB_LGRAY"] {
-    color: rgb(192, 192, 192);
-}
-
-[name="RGB_DGRAY"] {
-    color: rgb(128, 128, 128);
-}
-
-[name="RGB_LBLUE"] {
-    color: rgb(0, 0, 255);
-}
-
-[name="RGB_LGREEN"] {
-    color: rgb(0, 255, 0);
-}
-
-[name="RGB_LCYAN"] {
-    color: rgb(0, 255, 255);
-}
-
-[name="RGB_LRED"] {
-    color: rgb(255, 0, 0);
-}
-
-[name="RGB_LMAGENTA"] {
-    color: rgb(255, 0, 255);
-}
-
-[name="RGB_YELLOW"] {
-    color: rgb(255, 255, 0);
-}
-
-[name="RGB_WHITE"] {
-    color: rgb(255, 255, 255);
-}
-
-.BGC_BLACK {
-    background-color: rgb(0, 0, 0);
-}
-
-.BGC_BLUE {
-    background-color: rgb(0, 0, 128);
-}
-
-.BGC_GREEN {
-    background-color: rgb(0, 128, 0);
-}
-
-.BGC_CYAN {
-    background-color: rgb(0, 128, 128);
-}
-
-.BGC_RED {
-    background-color: rgb(128, 0, 0);
-}
-
-.BGC_MAGENTA {
-    background-color: rgb(128, 0, 128);
-}
-
-.BGC_BROWN {
-    background-color: rgb(128, 128, 0);
-}
-
-.BGC_LGRAY {
-    background-color: rgb(192, 192, 192);
-}
-
-.BGC_DGRAY {
-    background-color: rgb(128, 128, 128);
-}
-
-.BGC_LBLUE {
-    background-color: rgb(0, 0, 255);
-}
-
-.BGC_LGREEN {
-    background-color: rgb(0, 255, 0);
-}
-
-.BGC_LCYAN {
-    background-color: rgb(0, 255, 255);
-}
-
-.BGC_LRED {
-    background-color: rgb(255, 0, 0);
-}
-
-.BGC_LMAGENTA {
-    background-color: rgb(255, 0, 255);
-}
-
-.BGC_YELLOW {
-    background-color: rgb(255, 255, 0);
-}
-
-.BGC_WHITE {
-    background-color: rgb(255, 255, 255);
-}
+.F-BLACK { color: var(--BLACK); }
+.F-BLUE { color: var(--BLUE); }
+.F-GREEN { color: var(--GREEN); }
+.F-CYAN { color: var(--CYAN); }
+.F-RED { color: var(--RED); }
+.F-MAGENTA { color: var(--MAGENTA); }
+.F-BROWN { color: var(--BROWN); }
+.F-LGRAY { color: var(--LGRAY); }
+.F-DGRAY { color: var(--DGRAY); }
+.F-LBLUE { color: var(--LBLUE); }
+.F-LGREEN { color: var(--LGREEN); }
+.F-LCYAN { color: var(--LCYAN); }
+.F-LRED { color: var(--LRED); }
+.F-LMAGENTA { color: var(--LMAGENTA); }
+.F-YELLOW { color: var(--YELLOW); }
+.F-WHITE { color: var(--WHITE); }
 
 #preview {
     float: right;
@@ -238,7 +163,7 @@ div.output {
 }
 
 .category-items {
-    border-top: 1px solid white;
+    border-top: 1px solid var(--WHITE);
     font-size: 12px;
     line-height: 1em;
     padding: 10px;
@@ -279,10 +204,10 @@ table.colors > tbody > tr > td {
 }
 
 .fileName > input {
-    border: 1px solid #cccccc;
-    border-bottom-color: #b3b3b3;
-    color: white;
-    background-color: black;
+    border: 1px solid var(--LGRAY);
+    border-bottom-color: var(--DGRAY);
+    color: var(--WHITE);
+    background-color: var(--BLACK);
     font-family: inherit;
     font-size: 12px;
     padding: 4px 12px;
@@ -295,13 +220,13 @@ table.colors > tbody > tr > td {
     margin: 10px;
     display: inline-block;
     padding: 4px 12px;
-    border: 1px solid #cccccc;
-    border-bottom-color: #b3b3b3;
-    background-color: black;
+    border: 1px solid var(--LGRAY);
+    border-bottom-color: var(--DGRAY);
+    background-color: var(--BLACK);
 }
 
 .buttonWrapper:hover {
-    background-color: gray;
+    background-color: var(--DGRAY);
 }
 
 input.button {
@@ -323,8 +248,8 @@ input.button {
 
 .presetSelector select {
     height: 27px;
-    background-color: black;
-    color: white;
+    background-color: var(--BLACK);
+    color: var(--WHITE);
     font-family: inherit;
     font-size: 12px;
     top: -19px;
