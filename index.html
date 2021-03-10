@@ -8,6 +8,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="./map.js"></script>
+    <script type="text/javascript" src="./stones.js"></script>
     <!-- script type="text/javascript" src="./map2.js"></script -->
     <script type="text/javascript" src="./creatures.js"></script>
     <script type="text/javascript" src="./df.js"></script>
@@ -23,8 +24,8 @@
     <meta property="og:description" content="A colorscheme generator for Dwarf Fortress">
 </head>
 
-<body name="RGB_BLACK">
-    <table class="colors" style="">
+<body name="B-BLACK">
+    <table class="colors">
         <tr>
             <td>
                 <div class="wrapper">
@@ -107,7 +108,8 @@
     <div class="fileDownload buttonWrapper"> <span>Download File</span>
         <input type="button" value="Download" onclick="saveTextAsFile()" class="button"> </div>
     <hr />
-    <div name="RGB_WHITE" class="output"> <span name="fileout" id="RGB_BLACK_R">[BLACK_R:0]</span>
+    <div class="F-WHITE output">
+        <span name="fileout" id="RGB_BLACK_R">[BLACK_R:0]</span>
         <br /> <span name="fileout" id="RGB_BLACK_G">[BLACK_G:0]</span>
         <br /> <span name="fileout" id="RGB_BLACK_B">[BLACK_B:0]</span>
         <br /> <span name="fileout" id="RGB_BLUE_R">[BLUE_R:0]</span>
@@ -158,17 +160,22 @@
         <br /> </div>
 
 
-    <div class="map" name="RGB_BLACK" id="preview">
-        <table name="RGB_BLACK" id="map">
-            <tbody></tbody>
-        </table>
+    <div id="preview">
+        <div class="map B-BLACK">
+            <table class="B-BLACK" id="map">
+                <tbody></tbody>
+            </table>
+        </div>
+    
+        <div class="B-LGRAY map">
+            <table class="B-LGRAY" id="stones">
+                <tbody></tbody>
+            </table>
+        </div>
     </div>
+    
+
     <hr />
 
-    <table id="creatures" class="creatures">
-        <tbody>
-
-        </tbody>
-
-    </table>
+    <div id="creatures" class="creatures"></div>
 </body>

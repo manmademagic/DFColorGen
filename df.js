@@ -1,5 +1,6 @@
 $(document).ready(function() {
     generateMap("map")
+    generateStones("stones")
     generateCreatures("creatures")
     getColorSchemes(colorschemes)
     fileUpload()
@@ -48,30 +49,38 @@ function fileUpload() {
 }
 
 function generateCreatures(creatureTableID) {
-    var tbody = $("#" + creatureTableID + ">tbody")
+    var creatureSection = $("#" + creatureTableID)
     var categories = Object.keys(creatures)
-    var rowCount = 0
-    var td = $(document.createElement("td"))
-    categories.forEach(function(category) {
-        $(document.createElement("tr")).appendTo(tbody)
-        $(document.createElement("td"))
-            .attr("name", "RGB_WHITE")
-            .attr("colspan", 2)
-            .attr("class", "category")
+
+    categories.forEach(function(category, categoryIndex) {
+        var categoryId = "category-" + categoryIndex
+
+        $(document.createElement("div"))
+            .addClass("F-WHITE category")
+            .attr("id", categoryId)
             .text(category)
-            .appendTo(tbody.children()[rowCount])
-        rowCount++
-        creatures[category].forEach(function(creature) {
-            $(document.createElement("tr")).appendTo(tbody)
-            $(document.createElement("td"))
-                .attr("name", "RGB_" + creature[2])
+            .appendTo(creatureSection)
+
+        $(document.createElement("div"))
+            .addClass("F-WHITE category-items")
+            .appendTo($("#" + categoryId))
+
+        creatures[category].forEach(function(creature, creatureIndex) {
+            var creatureId = categoryId + "-" + creatureIndex
+
+            $(document.createElement("div"))
+                .attr("id", creatureId)
+                .appendTo($("#" + categoryId + ">.category-items"))
+
+            $(document.createElement("span"))
+                .addClass("F-" + creature[2] + " creature-icon")
                 .append(creature[0])
-                .appendTo(tbody.children()[rowCount])
-            $(document.createElement("td"))
-                .attr("name", "RGB_" + creature[2])
+                .appendTo($("#" + creatureId))
+
+            $(document.createElement("span"))
+                .addClass("F-" + creature[2])
                 .append(creature[1])
-                .appendTo(tbody.children()[rowCount])
-            rowCount++
+                .appendTo($("#" + creatureId))
         })
     })
 }
@@ -84,7 +93,7 @@ function generateMap(mapTableID) {
         for (var column = 0; column < map[row].length; column++) {
             $(document.createElement("td")).appendTo(tbody.children()[row])
             $(tbody.children()[row].children[column]).append(
-                '<div name="RGB_' +
+                '<div class="F-' +
                     map[row][column][1] +
                     '">' +
                     map[row][column][0] +
@@ -94,17 +103,31 @@ function generateMap(mapTableID) {
     }
 }
 
-function colorChange(colorName) {
-    var RGB_COLOR = document.getElementsByName("RGB_" + colorName)
-    for (var i = 0, max = RGB_COLOR.length; i < max; i++) {
-        if (colorName.toUpperCase() === "BLACK") {
-            RGB_COLOR[i].style.backgroundColor =
-                "#" + document.getElementById(colorName + "_PICKER").value
-        } else {
-            RGB_COLOR[i].style.color =
-                "#" + document.getElementById(colorName + "_PICKER").value
+function generateStones(stoneTableID) {
+    var tbody = $("#" + stoneTableID + ">tbody")
+
+    for (var row = 0; row < stones.length; row++) {
+        $(document.createElement("tr")).appendTo(tbody)
+        for (var column = 0; column < stones[row].length; column++) {
+            $(document.createElement("td")).appendTo(tbody.children()[row])
+            $(tbody.children()[row].children[column]).append(
+                '<div class="F-' +
+                    stones[row][column][2] + 
+                    ' B-' +
+                    stones[row][column][3] +
+                    '" title="' +
+                    stones[row][column][1] +
+                    '">' +
+                    stones[row][column][0] +
+                    '</div>'
+            )
         }
     }
+}
+
+function colorChange(colorName) {
+    document.body.style.setProperty("--" + colorName, 
+        "#" + document.getElementById(colorName + "_PICKER").value)
 }
 
 function presetSelect() {

@@ -1,22 +1,22 @@
 var creatures = {
     "Dwarf Professions": [
-        ["&#x00a9;", "Metalsmiths", "DGRAY"],
-        ["&#x00a9;", "Fishery Worker", "BLUE"],
-        ["&#x00a9;", "Craftsdwarfs", "LBLUE"],
-        ["&#x00a9;", "Rangers", "GREEN"],
-        ["&#x00a9;", "Jewelers", "LGREEN"],
-        ["&#x00a9;", "Peasants", "CYAN"],
-        ["&#x00a9;", "<i>On Break</i>", "LCYAN"],
-        ["&#x00a9;", "Children", "RED"],
-        ["&#x00a9;", "Engineers", "LRED"],
-        ["&#x00a9;", "Administrators", "MAGENTA"],
-        ["&#x00a9;", "Farmers", "BROWN"],
-        ["&#x00a9;", "Woodworkers", "YELLOW"],
-        ["&#x00a9;", "Miners", "LGRAY"],
-        ["&#x00a9;", "Stoneworkers", "WHITE"]
+        ["\u2659", "Metalsmiths", "DGRAY"],
+        ["\u2659", "Fishery Worker", "BLUE"],
+        ["\u2659", "Craftsdwarfs", "LBLUE"],
+        ["\u2659", "Rangers", "GREEN"],
+        ["\u2659", "Jewelers", "LGREEN"],
+        ["\u2659", "Peasants", "CYAN"],
+        ["\u2659", "<i>On Break</i>", "LCYAN"],
+        ["\u2659", "Children", "RED"],
+        ["\u2659", "Engineers", "LRED"],
+        ["\u2659", "Administrators", "MAGENTA"],
+        ["\u2659", "Farmers", "BROWN"],
+        ["\u2659", "Woodworkers", "YELLOW"],
+        ["\u2659", "Miners", "LGRAY"],
+        ["\u2659", "Stoneworkers", "WHITE"]
     ],
     "Main Races": [
-        ["&#x263a;", "Dwarf", "CYAN"],
+        ["\u263a", "Dwarf", "CYAN"],
         ["e", "Elf", "CYAN"],
         ["g", "Goblin", "LGRAY"],
         ["U", "Human", "CYAN"],
@@ -583,7 +583,7 @@ var creatures = {
         ["a", "Carp", "CYAN"],
         ["a", "Cod", "LGRAY"],
         ["C", "Coelacanth", "LBLUE"],
-        ["&#xF2;", "Common skate", "BROWN"],
+        ["ò", "Common skate", "BROWN"],
         ["t", "Common snapping turtle", "GREEN"],
         ["~", "Conger eel", "LGRAY"],
         ["c", "Crab", "LRED"],
@@ -663,7 +663,7 @@ var creatures = {
         ["g", "Longnose gar", "BROWN"],
         ["l", "Loon", "DGRAY"],
         ["l", "Loon man", "DGRAY"],
-        ["&#x00ca;", "Manta ray", "LGRAY"],
+        ["►", "Manta ray", "LGRAY"],
         ["a", "Marlin", "LBLUE"],
         ["M", "Merperson", "LCYAN"],
         ["a", "Milkfish", "LCYAN"],
@@ -709,7 +709,7 @@ var creatures = {
         ["s", "Sponge man", "LRED"],
         ["S", "Spotted wobbegong", "BROWN"],
         ["s", "Squid man", "WHITE"],
-        ["&#xf2;", "Stingray", "LGRAY"],
+        ["ò", "Stingray", "LGRAY"],
         ["a", "Sturgeon", "BROWN"],
         ["s", "Swan", "WHITE"],
         ["s", "Swan man", "WHITE"],
@@ -725,8 +725,8 @@ var creatures = {
     Other: [
         ["Any", "Forgotten beast", "WHITE"],
         ["Any", "Titan", "WHITE"],
-        ["&#xd1;", "Night troll", "LGREEN"],
-        ["&#xf1;", "Bogeyman", "DGRAY"],
-        ["&#xd1;", "Werebeast", "BROWN"]
+        ["Ñ", "Night troll", "LGREEN"],
+        ["Ñ", "Bogeyman", "DGRAY"],
+        ["Ñ", "Werebeast", "BROWN"]
     ]
 }
